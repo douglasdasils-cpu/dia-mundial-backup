@@ -607,15 +607,21 @@ background: #000;
     font-weight: 700;
 }
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     .hero {
         width: 100% !important;
+        max-width: 100% !important;
         margin: 0 !important;
         margin-left: 0 !important;
-        transform: none !important;
         padding: 20px !important;
+        transform: none !important;
+        left: 0 !important;
+        overflow: hidden;
         background-size: cover !important;
         background-position: center !important;
-        overflow: hidden;
     }
 
     .hero-content {
@@ -631,6 +637,7 @@ background: #000;
         line-height: 1.05 !important;
         white-space: normal !important;
     }
+}
 
     .hero p {
         max-width: 100% !important;
@@ -643,4 +650,11 @@ background: #000;
         box-sizing: border-box;
     }
 }
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
